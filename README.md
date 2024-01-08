@@ -17,7 +17,8 @@ i also wrote about why you'd want to do this here [here](https://dev.to/s1ntaxe7
 
 ## Runing the image 
 
-` docker run -p 22:22 IMAGE_NAME `
+` docker run --name CONTAINER_NAME --hostname=docker --env=HOME=/root --env=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin -p 22:22 --volume=E:\temp\data:/data --workdir=/root --restart=no -t -d IMAGE_NAME `
+
 
 
 ## Or simply pull the image 
